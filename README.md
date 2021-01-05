@@ -16,4 +16,4 @@ feh
 # Guide
 Simply move the **.config** folder into your users **home**.
 Then move your preferred background to ~/Pictures/wallpaper.jpeg.
-Also for best results install the paper GTK theme and use
+Also for best results install the paper GTK theme and use rofi-select-theme.
