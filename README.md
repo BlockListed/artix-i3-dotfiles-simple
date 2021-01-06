@@ -9,9 +9,10 @@ polybar
 picom-ibhagwan
 i3lock-fancy
 feh
+rofi
 ```
 ## Yay install command
-`yay -S i3 polybar picom-ibhagen i3lock-fancy-git feh`
+`yay -S i3 polybar picom-ibhagen i3lock-fancy-git feh rofi`
 
 # Guide
 Simply move the **.config** folder into your users **home**.
