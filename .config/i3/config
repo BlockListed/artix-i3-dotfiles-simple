@@ -53,8 +53,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -show drun -font \\"DejaVu 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
-
+bindsym $mod+d exec --no-startup-id "rofi -show drun -show-icons -config /home/blocked/.config/i3/rofi/conf.rasi"
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -187,5 +186,7 @@ gaps outer 5
 gaps inner 5
 
 exec_always feh --bg-scale /home/blocked/Pictures/background.jpeg
+exec_always xss-lock -- i3lock-fancy &
 
 bindsym $mod+Shift+x exec i3lock-fancy
+bindsym $mod+Shift+s exec systemctl suspend
