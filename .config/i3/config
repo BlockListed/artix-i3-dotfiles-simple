@@ -47,7 +47,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty --config-file ~/.config/i3/alacritty/alacritty.yml
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -188,5 +188,11 @@ gaps inner 5
 exec_always feh --bg-scale /home/blocked/Pictures/background.jpeg
 exec_always xss-lock -- i3lock-fancy &
 
+bindsym $mod+Shift+m exec /home/blocked/.config/i3/rofi/rofi-power
 bindsym $mod+Shift+x exec i3lock-fancy
 bindsym $mod+Shift+s exec systemctl suspend
+# programs:
+exec_always i3-msg "workspace 1; exec firefox https://ght-hh.de/iserv/login &"
+exec_always i3-msg "workspace 2; exec discord &"
+workspace 1 output DP-1
+workspace 2 output eDP-1-1
