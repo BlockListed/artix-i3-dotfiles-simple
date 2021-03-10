@@ -10,6 +10,10 @@ picom-ibhagwan
 i3lock-fancy
 feh
 rofi
+
+Optional (Just for my workflow):
+calenderdaemon (from my git)
+sxhkd
 ```
 ## Yay install command
 `yay -S i3-gaps polybar picom-ibhagen i3lock-fancy-git feh rofi`
