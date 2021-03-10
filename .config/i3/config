@@ -196,4 +196,5 @@ bindsym $mod+Shift+s exec loginctl suspend
 #exec_always i3-msg "workspace 2; exec discord &"
 #workspace 1 output DP-1
 #workspace 2 output eDP-1-1
-exec_always $HOME/.config/i3/caldfix.sh
+exec_always $HOME/.config/i3/caldfix.sh &
+exec sxhkd -c $HOME/.config/i3/sxhkd/sxhkdrc &

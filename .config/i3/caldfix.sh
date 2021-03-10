@@ -1,3 +1,3 @@
 #!/bin/bash
 killall cald
-cald &
+cald >> $HOME/.config/cald/log &
