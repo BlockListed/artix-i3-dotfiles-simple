@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-exec sh /home/blocked/.screenlayout/layout.sh
+exec sh $HOME/.screenlayout/layout.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -176,23 +176,24 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec "setxkbmap -layout de"
-exec_always ~/.config/i3/polybar/launch.sh &
+exec_always $HOME/.config/i3/polybar/launch.sh &
 default_border pixel 0
 default_floating_border pixel 0
 
-exec_always ~/.config/i3/picomfix.sh
+exec_always $HOME/.config/i3/picomfix.sh
 
 gaps outer 5
 gaps inner 5
 
-exec_always feh --bg-scale /home/blocked/Pictures/background.jpeg
+exec_always feh --bg-scale $HOME/Pictures/background.jpeg
 exec_always xss-lock -- i3lock-fancy &
 
-bindsym $mod+Shift+m exec /home/blocked/.config/i3/rofi/rofi-power
+bindsym $mod+Shift+m exec $HOME/.config/i3/rofi/rofi-power
 bindsym $mod+Shift+x exec i3lock-fancy
 bindsym $mod+Shift+s exec loginctl suspend
 # programs:
-exec_always i3-msg "workspace 1; exec firefox https://ght-hh.de/iserv/login &"
-exec_always i3-msg "workspace 2; exec discord &"
-workspace 1 output DP-1
-workspace 2 output eDP-1-1
+#exec_always i3-msg "workspace 1; exec firefox https://ght-hh.de/iserv/login &"
+#exec_always i3-msg "workspace 2; exec discord &"
+#workspace 1 output DP-1
+#workspace 2 output eDP-1-1
+exec_always $HOME/.config/i3/caldfix.sh

@@ -29,13 +29,13 @@ then
         eval $1
         ;;
       Reboot)
-        loginctl reboot
+        systemctl reboot
         ;;
       Power-off)
-        loginctl poweroff
+        systemctl poweroff
         ;;
       Suspend)
-        $($USE_LOCKER) && "$LOCKER"; loginctl suspend
+        $($USE_LOCKER) && "$LOCKER"; systemctl suspend
         ;;
       *)
         ;;

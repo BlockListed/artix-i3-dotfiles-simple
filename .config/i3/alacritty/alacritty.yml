@@ -29,5 +29,5 @@ colors:
     magenta: '0xcc00ff'
     cyan:    '0x00ffff'
     white:   '0xFFFFFF'
-
-
+font:
+  size: 9
