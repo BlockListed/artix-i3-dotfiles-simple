@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-exec sh $HOME/.screenlayout/layout.sh
+exec_always sh $HOME/.config/i3/screenconfig/xrandr.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -190,11 +190,12 @@ exec_always xss-lock -- i3lock-fancy &
 
 bindsym $mod+Shift+m exec $HOME/.config/i3/rofi/rofi-power
 bindsym $mod+Shift+x exec i3lock-fancy
-bindsym $mod+Shift+s exec loginctl suspend
+bindsym $mod+Shift+s exec systemctl suspend
 # programs:
 #exec_always i3-msg "workspace 1; exec firefox https://ght-hh.de/iserv/login &"
 #exec_always i3-msg "workspace 2; exec discord &"
-#workspace 1 output DP-1
-#workspace 2 output eDP-1-1
-exec_always $HOME/.config/i3/caldfix.sh &
+workspace 1 output DP-1
+workspace 2 output eDP-1-1
+exec_always $HOME/.config/i3/caldfix.sh
 exec sxhkd -c $HOME/.config/i3/sxhkd/sxhkdrc &
+exec dunst &
