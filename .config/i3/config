@@ -53,7 +53,7 @@ bindsym $mod+Return exec alacritty --config-file ~/.config/i3/alacritty/alacritt
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -show drun -show-icons -config /home/blocked/.config/i3/rofi/conf.rasi"
+bindsym $mod+d exec --no-startup-id "rofi -show drun -show-icons -config $HOME/.config/i3/rofi/conf.rasi"
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
